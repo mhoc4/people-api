@@ -2,6 +2,7 @@ package com.github.mhoc4.PersonManagerAPI.controller;
 
 import com.github.mhoc4.PersonManagerAPI.dto.PersonDTO;
 
+import com.github.mhoc4.PersonManagerAPI.exceptions.PersonNotFoundException;
 import com.github.mhoc4.PersonManagerAPI.services.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,11 +29,21 @@ public class PersonController {
         return personService.findAll();
     }
 
+    @GetMapping("/{id}")
+    public PersonDTO findById(@PathVariable Long id) throws PersonNotFoundException {
+        return personService.findById(id);
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void createPerson(@Valid @RequestBody PersonDTO personDTO) {
         personService.createPerson(personDTO);
+    }
 
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteById(Long id) throws PersonNotFoundException {
+        personService.delete(id);
     }
 
 }
