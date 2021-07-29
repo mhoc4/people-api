@@ -1,16 +1,16 @@
 package com.github.mhoc4.PersonManagerAPI.dto;
 
-import com.github.mhoc4.PersonManagerAPI.entity.Person;
 import com.github.mhoc4.PersonManagerAPI.entity.Phone;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
-import java.time.LocalDate;
 import java.util.List;
 import org.hibernate.validator.constraints.br.CPF;
 
 public class PersonDTO {
+
+    private Long id;
 
     @NotEmpty
     @Size(min = 2, max = 100)
@@ -33,12 +33,21 @@ public class PersonDTO {
     public PersonDTO() {
     }
 
-    public PersonDTO(String firstName, String lastName, String cpf, String birthDate, List<Phone> phones) {
+    public PersonDTO(Long id, String firstName, String lastName, String cpf, String birthDate, List<Phone> phones) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.cpf = cpf;
         this.birthDate = birthDate;
         this.phones = phones;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFirstName() {
