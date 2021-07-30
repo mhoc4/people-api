@@ -1,4 +1,4 @@
-package com.github.mhoc4.PersonManagerAPI.dto;
+package com.github.mhoc4.PersonManagerAPI.dto.request;
 
 import com.github.mhoc4.PersonManagerAPI.entity.Phone;
 

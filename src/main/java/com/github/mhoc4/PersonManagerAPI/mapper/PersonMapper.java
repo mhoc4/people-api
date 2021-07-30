@@ -1,6 +1,6 @@
 package com.github.mhoc4.PersonManagerAPI.mapper;
 
-import com.github.mhoc4.PersonManagerAPI.dto.PersonDTO;
+import com.github.mhoc4.PersonManagerAPI.dto.request.PersonDTO;
 import com.github.mhoc4.PersonManagerAPI.entity.Person;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
