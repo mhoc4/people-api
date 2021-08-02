@@ -4,13 +4,10 @@ import com.github.mhoc4.PersonManagerAPI.dto.request.PersonDTO;
 import com.github.mhoc4.PersonManagerAPI.dto.response.MessageResponseDTO;
 import com.github.mhoc4.PersonManagerAPI.entity.Person;
 import com.github.mhoc4.PersonManagerAPI.exceptions.PersonNotFoundException;
-import com.github.mhoc4.PersonManagerAPI.mapper.PersonMapper;
+import com.github.mhoc4.PersonManagerAPI.dto.mapper.PersonMapper;
 import com.github.mhoc4.PersonManagerAPI.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 import java.util.stream.Collectors;
