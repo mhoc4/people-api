@@ -12,7 +12,7 @@
 	<artifactId>PersonManagerAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>PersonManagerAPI</name>
-	<description>Person REST API Project</description>
+	<description>REST Person API Project</description>
 
 	<properties>
 		<java.version>11</java.version>
