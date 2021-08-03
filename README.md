@@ -23,6 +23,10 @@ Obs.: Due to the deployment being done using the free Heroku plan, the API may t
 - Spring Data JPA
 - Maven
 - H2 Database
+- Lombok
+- MapStruct
+- JUnit
+- Mockito
 
 # How to run the project
 
